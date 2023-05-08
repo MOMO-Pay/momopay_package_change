@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.me.momopay.views.StaxCardView
+            android:id="@+id/request_formCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showBack="true"
+            app:title="@string/req_cardhead">
+
+        <include
+                android:id="@+id/cardAmount"
+                layout="@layout/request_card_amount" />
+
+        <include
+                android:id="@+id/cardRequestee"
+                layout="@layout/request_card_requestee" />
+
+        <include
+                android:id="@+id/transferNote"
+                layout="@layout/transfer_note" />
+
+    </com.me.momopay.views.StaxCardView>
+
+    <com.me.momopay.views.StaxCardView
+            android:id="@+id/request_accountCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showBack="false"
+            app:title="@string/into_account">
+
+        <include
+                android:id="@+id/cardRequester"
+                layout="@layout/request_card_requester" />
+
+    </com.me.momopay.views.StaxCardView>
+</LinearLayout>

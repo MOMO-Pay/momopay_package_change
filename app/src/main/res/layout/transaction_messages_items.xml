@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/cardViewColor"
+    android:layout_width="match_parent"
+    android:paddingVertical="8dp"
+    android:layout_height="wrap_content">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/timeStampIntro"
+		android:textColor="@color/grey"
+		android:visibility="gone"
+		android:layout_marginBottom="@dimen/margin_5"
+		android:paddingHorizontal="@dimen/margin_16"
+		android:layout_alignParentEnd="true" />
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:layout_below="@id/timeStampIntro"
+	    android:maxWidth="200dp"
+	    android:textColor="@color/offWhite"
+	    android:textSize="@dimen/text_13"
+	    android:textAlignment="textStart"
+	    android:paddingEnd="26dp"
+	    android:paddingStart="16dp"
+	    android:paddingVertical="10dp"
+	    android:background="@drawable/bubble_right"
+	    android:id="@+id/message_enteredValue"
+	    android:layout_alignParentEnd="true" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/timeStampEnded"
+		android:layout_below="@id/message_enteredValue"
+		android:textColor="@color/grey"
+		android:visibility="gone"
+		android:paddingHorizontal="@dimen/margin_16"
+		android:layout_alignParentStart="true" />
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:maxWidth="250dp"
+	    android:textColor="@color/offWhite"
+	    android:textAlignment="textStart"
+	    android:paddingStart="26dp"
+	    android:paddingEnd="16dp"
+	    android:paddingVertical="10dp"
+		android:textSize="@dimen/text_13"
+	    android:background="@drawable/bubble_left"
+	    android:id="@+id/message_content"
+	    android:layout_below="@id/timeStampEnded"
+	    android:layout_marginTop="8dp"
+	    android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".settings.SettingsFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_13"
+            android:layout_marginBottom="@dimen/margin_89"
+            android:orientation="vertical">
+
+        <include
+                android:id="@+id/share_card"
+                layout="@layout/settings_card_share" />
+
+        <include
+                android:id="@+id/settings_card"
+                layout="@layout/settings_card_meta" />
+
+
+        <include
+                android:id="@+id/bounty_card"
+                layout="@layout/settings_card_bounties" />
+
+
+        <include
+                android:id="@+id/permission_card"
+                layout="@layout/settings_card_permissions" />
+
+
+        <include
+                android:id="@+id/stax_learn"
+                layout="@layout/settings_card_learn" />
+
+
+        <include
+                android:id="@+id/stax_support"
+                layout="@layout/settings_card_support" />
+
+        <include
+                android:id="@+id/securityCard"
+                layout="@layout/settings_security_card" />
+
+
+        <include
+                android:id="@+id/languageCard"
+                layout="@layout/settings_card_language" />
+
+
+        <include
+            android:id="@+id/appInfoCard"
+            layout="@layout/settings_app_details_card" />
+
+        <include
+                android:id="@+id/accountCard"
+                layout="@layout/settings_account_card" />
+
+        <TextView
+                android:id="@+id/disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_13"
+                android:lineSpacingExtra="2sp"
+                android:text="@string/disclaimer"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/text_13" />
+
+        <com.me.momopay.views.PrivacyPolicyText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

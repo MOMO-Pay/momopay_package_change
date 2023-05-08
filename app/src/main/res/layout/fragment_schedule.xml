@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_13"
+        android:layout_marginBottom="@dimen/margin_55"
+        android:orientation="vertical">
+
+        <com.me.momopay.views.StaxCardView
+            android:id="@+id/scheduleDetailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/nav_schedule">
+
+            <include
+                android:id="@+id/summaryCard"
+                layout="@layout/schedule_summary" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_21">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/test_btn"
+                    style="@style/StaxButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/divider"
+                    app:fontFamily="@font/brutalista_medium"
+                    android:text="@string/btn_test"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="@dimen/margin_21"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/cancel_btn"
+                    android:background="@color/transparent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancel_btn"
+                    style="@style/StaxButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    app:fontFamily="@font/brutalista_medium"
+                    android:text="@string/btn_cancel" />
+            </RelativeLayout>
+        </com.me.momopay.views.StaxCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

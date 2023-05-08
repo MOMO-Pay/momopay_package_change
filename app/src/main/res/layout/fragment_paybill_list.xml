@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.me.momopay.views.StaxCardView
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:showBack="true"
+            app:title="@string/business_number_label">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:orientation="vertical">
+
+            <include
+                    android:id="@+id/newPaybill"
+                    layout="@layout/item_paybill" />
+
+            <TextView
+                    android:id="@+id/savedHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    app:fontFamily="@font/brutalista_medium"
+                    android:text="@string/label_saved"
+                    android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/savedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_13"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_paybill_saved" />
+
+            <TextView
+                    android:id="@+id/popularHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    app:fontFamily="@font/brutalista_medium"
+                    android:text="@string/label_popular"
+                    android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/popularList"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/margin_13"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_paybill" />
+
+        </LinearLayout>
+
+    </com.me.momopay.views.StaxCardView>
+</androidx.core.widget.NestedScrollView>

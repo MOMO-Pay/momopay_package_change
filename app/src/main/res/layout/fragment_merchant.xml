@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_13"
+        tools:context=".merchants.MerchantFragment">
+
+    <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_89"
+            android:descendantFocusability="afterDescendants"
+            android:focusableInTouchMode="true"
+            android:paddingHorizontal="@dimen/margin_5"
+            android:orientation="vertical">
+
+        <include
+                android:id="@+id/editCard"
+                layout="@layout/merchant_card_edit"
+                tools:layout="@layout/merchant_card_edit" />
+
+        <include
+                android:id="@+id/summaryCard"
+                layout="@layout/merchant_card_summary"
+                android:visibility="gone" />
+
+        <TextView
+                android:id="@+id/noWorryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_13"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:lineSpacingExtra="2sp"
+                android:text="@string/noworry_explain"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+        <Button
+                android:id="@+id/fab"
+                style="@style/StaxFabExtended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginHorizontal="@dimen/margin_13"
+                android:layout_marginTop="10dp"
+                android:text="@string/btn_continue"
+                app:fontFamily="@font/brutalista_medium"
+                app:layout_anchorGravity="end|bottom" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

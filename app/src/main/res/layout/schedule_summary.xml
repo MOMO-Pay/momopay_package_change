@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Stax
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scheduleTable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/transfer_amount_label"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/details_amount"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_21" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/recipient_label"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:id="@+id/requesteeValueList"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/date_label"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/details_date"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_21" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/frequencyRow"
+            android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/repeatfreq_label"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/details_frequency"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_21" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/endRow"
+            android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/end_label"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/details_end"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_21" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/noteRow"
+            android:layout_marginTop="@dimen/margin_24">
+
+            <TextView
+                android:text="@string/note_cardhead"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/details_reason"
+                android:layout_weight="1"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/offWhite"
+                android:textSize="@dimen/text_21" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

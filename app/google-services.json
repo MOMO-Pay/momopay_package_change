@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875810332632",
+    "project_id": "myproject-d340d",
+    "storage_bucket": "myproject-d340d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875810332632:android:6862ac0b12c5ac51db9cad",
+        "android_client_info": {
+          "package_name": "com.me.momopay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875810332632-omfj8b9vrkdkpuqi3roccmr5pg2916es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLnSSGkYtk1eNMi31WrWaRZ9-gF4P4L6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875810332632-omfj8b9vrkdkpuqi3roccmr5pg2916es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
